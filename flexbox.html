@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Section — Flexbox Version</title>
+<link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+
+<div class="topbar">
+  <h1>Pricing Section — Flexbox Version</h1>
+  <a class="switch-link" href="grid.html">View Grid version →</a>
+</div>
+
+<div class="shell">
+
+  <p class="intro">Built using Flexbox only. Resize the browser below 600px to see it stack into a single column.</p>
+
+  <div class="demo">
+    <header class="demo-header">
+      <span class="plan-name">Neurofive Cloud</span>
+      <span>Pricing</span>
+    </header>
+
+    <div class="pricing-row">
+      <div class="plan">
+        <h3>Starter</h3>
+        <div class="price">$9<span>/mo</span></div>
+        <ul>
+          <li>1 project</li>
+          <li>5 GB storage</li>
+          <li>Community support</li>
+        </ul>
+        <button>Choose Starter</button>
+      </div>
+
+      <div class="plan featured">
+        <h3>Growth</h3>
+        <div class="price">$29<span>/mo</span></div>
+        <ul>
+          <li>10 projects</li>
+          <li>100 GB storage</li>
+          <li>Priority support</li>
+        </ul>
+        <button>Choose Growth</button>
+      </div>
+
+      <div class="plan">
+        <h3>Scale</h3>
+        <div class="price">$79<span>/mo</span></div>
+        <ul>
+          <li>Unlimited projects</li>
+          <li>1 TB storage</li>
+          <li>Dedicated support</li>
+        </ul>
+        <button>Choose Scale</button>
+      </div>
+    </div>
+
+    <footer class="demo-footer">© 2026 Neurofive Cloud — cancel anytime</footer>
+  </div>
+
+  <div class="code-panel">
+    <div class="code-panel-head">the layout CSS (flexbox.css)</div>
+    <pre><span class="tok-com">/* Flexbox layout */</span>
+.pricing-row {
+  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;
+  <span class="tok-prop">gap</span>: <span class="tok-val">24px</span>;
+}
+.plan { <span class="tok-prop">flex</span>: <span class="tok-val">1 1 0</span>; }
+.plan.featured { <span class="tok-prop">flex</span>: <span class="tok-val">1.08 1 0</span>; } <span class="tok-com">/* slightly wider */</span>
+
+<span class="tok-com">/* stack below 600px */</span>
+@media (max-width: 600px) {
+  .pricing-row { <span class="tok-prop">flex-direction</span>: <span class="tok-val">column</span>; }
+}</pre>
+  </div>
+
+</div>
+
+</body>
+</html>
