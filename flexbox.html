@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neurofive Cloud — Pricing (Flexbox)</title>
+<link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <span class="brand-mark"></span>
+    Neurofive Cloud
+  </div>
+  <a class="switch-link" href="grid.html">View Grid version →</a>
+</div>
+
+<div class="shell">
+
+  <div class="page-head">
+    <span class="eyebrow">Layout built with Flexbox</span>
+    <h1>Simple, transparent pricing</h1>
+    <p>Pick the plan that fits your team. Upgrade or cancel anytime — no contracts, no surprises.</p>
+  </div>
+
+  <div class="pricing-row">
+    <div class="plan">
+      <div class="plan-top">
+        <h3>Starter</h3>
+        <p class="tagline">For solo builders</p>
+      </div>
+      <div class="price">$9<span>/ month</span></div>
+      <ul>
+        <li>1 project</li>
+        <li>5 GB storage</li>
+        <li>Community support</li>
+      </ul>
+      <button>Choose Starter</button>
+    </div>
+
+    <div class="plan featured">
+      <span class="badge">Most popular</span>
+      <div class="plan-top">
+        <h3>Growth</h3>
+        <p class="tagline">For growing teams</p>
+      </div>
+      <div class="price">$29<span>/ month</span></div>
+      <ul>
+        <li>10 projects</li>
+        <li>100 GB storage</li>
+        <li>Priority support</li>
+        <li>Team collaboration</li>
+      </ul>
+      <button>Choose Growth</button>
+    </div>
+
+    <div class="plan">
+      <div class="plan-top">
+        <h3>Scale</h3>
+        <p class="tagline">For larger organizations</p>
+      </div>
+      <div class="price">$79<span>/ month</span></div>
+      <ul>
+        <li>Unlimited projects</li>
+        <li>1 TB storage</li>
+        <li>Dedicated support</li>
+        <li>Custom integrations</li>
+      </ul>
+      <button>Choose Scale</button>
+    </div>
+  </div>
+
+  <p class="foot-note">© 2026 Neurofive Cloud — all plans include a 14-day free trial.</p>
+
+  <details class="code-panel">
+    <summary>View the layout CSS (flexbox.css)</summary>
+    <pre><span class="tok-com">/* Flexbox layout */</span>
+.pricing-row {
+  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;
+  <span class="tok-prop">gap</span>: <span class="tok-val">24px</span>;
+}
+.plan { <span class="tok-prop">flex</span>: <span class="tok-val">1 1 0</span>; }
+.plan.featured { <span class="tok-prop">flex</span>: <span class="tok-val">1.06 1 0</span>; } <span class="tok-com">/* slightly wider */</span>
+
+<span class="tok-com">/* stack below 600px */</span>
+@media (max-width: 600px) {
+  .pricing-row { <span class="tok-prop">flex-direction</span>: <span class="tok-val">column</span>; }
+}</pre>
+  </details>
+
+</div>
+
+</body>
+</html>
